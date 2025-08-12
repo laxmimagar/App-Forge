@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AppForge - URL to APK Converter</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #1e1e2f, #2d2d44);
+      color: #fff;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      padding: 20px;
+      background: #ff5733;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    main {
+      padding: 30px;
+    }
+    input, button {
+      padding: 10px;
+      margin: 10px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: none;
+    }
+    input {
+      width: 250px;
+    }
+    button {
+      background: #ff5733;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #ff784e;
+    }
+    footer {
+      margin-top: 50px;
+      padding: 15px;
+      background: #1a1a2e;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <header>AppForge</header>
+  <main>
+    <h2>Convert your website URL into APK</h2>
+    <input type="text" id="urlInput" placeholder="Enter your website URL">
+    <br>
+    <button onclick="generateAPK()">Generate APK</button>
+    <p id="status"></p>
+  </main>
+  <footer>© 2025 AppForge - All Rights Reserved</footer>
+
+  <script>
+    function generateAPK() {
+      let url = document.getElementById('urlInput').value;
+      if(url.trim() === "") {
+        document.getElementById('status').innerText = "Please enter a valid URL.";
+        return;
+      }
+      document.getElementById('status').innerText = "Processing your APK for " + url + "... (Demo only)";
+    }
+  </script>
+</body>
+</html>
